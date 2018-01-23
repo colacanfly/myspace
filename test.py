@@ -21,6 +21,7 @@ def funtion(root):
                         sql="insert into goods(type,number,name,price,link) values(\""+table.name.encode('utf-8')+"\",\""+str(row[0])+"\",\""+row[1].encode('utf-8')+"\",\""+str(row[2])+"\",\""+row[3].encode('utf-8')+"\")"
 
                         print sql
+                        cusor.execute("set names utf8")
                         cusor.execute(sql)
                         conn.commit()
                 conn.close()
